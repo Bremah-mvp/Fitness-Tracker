@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try {
         const workouts = await db.Workout.find({});
         console.log('from api workouts route');
-        res.json(fitness);
+        res.json(workouts);
     } catch (err) {
         res.status(500).send(err);
     }
@@ -16,23 +16,23 @@ router.get('/', async (req, res) => {
 
 router.get('/range', async (req, res) => {
     try {
-        const fitness = await db.fitness.find({});
-        console.log('from api fitness route');
-        res.json(fitness);
+        const workouts = await db.Workout.find({});
+        console.log('from api workouts route');
+        res.json(workouts);
     } catch (err) {
         res.status(500).send(err);
     }
 });
 
 router.post('/', async (req, res) => {
-    console.log("from post routes");
+    console.log("from post route");
     console.log(req.body);
 
     try {
-        const fitness = req.body;
-        fitness.day = Date.now();
-        console.log(fitness);
-        const result = await db.Fitness.create(fitness);
+        const workout = req.body;
+        workout.day = Date.now();
+        console.log(workout);
+        const result = await db.Workout.create(workout);
         res.json(result);
     } catch (err) {
         res.status(500).send(err);
@@ -45,7 +45,7 @@ router.put('/:id', async (req, res) => {
         const exercise = req.body;
         console.log(exercise);
         console.log(req.params.id);
-        const result = await db.Fitness.findByIdAndUpdate(
+        const result = await db.Workout.findByIdAndUpdate(
             req.params.id,
             {$push: { exercises: exercise }},
             { new: true}
