@@ -39,3 +39,22 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.put('/:id', async (req, res) => {
+    console.log('from put route');
+    try {
+        const exercise = req.body;
+        console.log(exercise);
+        console.log(req.params.id);
+        const result = await db.Fitness.findByIdAndUpdate(
+            req.params.id,
+            {$push: { exercises: exercise }},
+            { new: true}
+        );
+        res.json(result);
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
+module.exports = router;
+
