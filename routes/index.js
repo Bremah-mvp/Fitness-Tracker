@@ -1,9 +1,9 @@
 const express = require('express');
 
-const workoutsRoutes = require('./fitness');
+const workoutsRoutes = require('./workout');
 
 const router = express.Router();
 
-router.use('/fitness', fitnessRoutes);
+router.use('/workout', workoutRoutes);
 
 module.exports = router;
