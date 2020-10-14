@@ -3,7 +3,7 @@ const { constants } = require("fs");
 const mongoose = require('mongoose');
 const schema = mongoose.schema;
 
-const FitnessSchema = new schema({
+const WorkoutSchema = new schema({
     day: {
         type: Date,
         required: 'Date is required'
@@ -14,7 +14,7 @@ const FitnessSchema = new schema({
             type: {
                 type: String,
                 trim: true,
-                required: 'type is required.'
+                required: 'Type is required.'
             },
             name: {
                 type: String,
@@ -48,6 +48,6 @@ const FitnessSchema = new schema({
     ]
 });
 
-const Fitness = mangoose.model('Fitness', FitnessSchema);
+const Workout = mangoose.model('Workout', WorkoutSchema);
 
-module.exports = Fitness;
+module.exports = Workout;
