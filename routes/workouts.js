@@ -6,8 +6,8 @@ const db = require('..models');
 
 router.get('/', async (req, res) => {
     try {
-        const fitness = await db.fitness.find({});
-        console.log('from api fitness route');
+        const workouts = await db.Workout.find({});
+        console.log('from api workouts route');
         res.json(fitness);
     } catch (err) {
         res.status(500).send(err);
