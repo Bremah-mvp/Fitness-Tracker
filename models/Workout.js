@@ -50,6 +50,6 @@ const WorkoutSchema = new Schema({
 
 });
 
-const Workout = mangoose.model('Workout', WorkoutSchema);
+const Workout = mongoose.model('Workout', WorkoutSchema);
 
 module.exports = Workout;
