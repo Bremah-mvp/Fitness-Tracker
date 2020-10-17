@@ -1,7 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-const routes = require('./routes');
+const routes = require('./routes/index');
 const htmlRoutes = require('./routes/htmlRoutes');
 
 require('dotenv').config()
