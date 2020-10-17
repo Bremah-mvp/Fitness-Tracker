@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 const schema = mongoose.schema;
 
-const WorkoutSchema = new schema({
+const workoutSchema = new schema({
     day: {
         type: Date,
         required: 'Date is required'
