@@ -47,6 +47,7 @@ const WorkoutSchema = new schema({
 
         }
     ]
+
 });
 
 const Workout = mangoose.model('Workout', WorkoutSchema);
