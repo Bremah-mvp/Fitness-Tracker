@@ -13,11 +13,11 @@ body,
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Times New Roman', Times, serif
 }
 
 nav {
-  background-color: #5793fd;
+  background-color: red;
   color: #ffffff;
   height: 80px;
   padding: 10px;
