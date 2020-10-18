@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
 
     // Used by api.js to get last workout
-    app.get("/api/workouts", (req, res) => {
+    app.get("/api/workout", (req, res) => {
         db.Workout.find({})
         .then(workout => {
             res.json(workout);
@@ -14,7 +14,7 @@ module.exports = function(app) {
     });
     
     // Creates a new workout in the workout database
-    app.post("/api/workouts", async (req, res)=> {
+    app.post("/api/workout", async (req, res)=> {
         try{
             const response = await db.Workout.create({type: "workout"})
             res.json(response);
@@ -25,7 +25,7 @@ module.exports = function(app) {
     })
 
     // Used by api.js to add an exercise to a workout
-    app.put("/api/workouts/:id", ({body, params}, res) => {
+    app.put("/api/workout/:id", ({body, params}, res) => {
         // console.log(body, params)
         const workoutId = params.id;
         let savedExercises = [];
@@ -55,7 +55,7 @@ module.exports = function(app) {
             
     })
 
-    app.get("/api/workouts/range", (req, res) => {
+    app.get("/api/workout/range", (req, res) => {
         db.Workout.find({})
         .then(workout => {
             res.json(workout);
