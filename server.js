@@ -16,13 +16,6 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static('public'));
-app.use('/api', routes);
-
-
-app.use('/', htmlRoutes);
-
-
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
@@ -30,6 +23,15 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
 	useFindAndModify: false
 }
 );
+
+app.use(express.static('public'));
+app.use('/api', routes);
+
+
+app.use('/', htmlRoutes);
+
+
+
 
 
 app.listen(PORT, () => {
