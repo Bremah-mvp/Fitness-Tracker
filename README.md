@@ -33,6 +33,9 @@ Fitness Tracker
 
                         Screenshots
 fitness tracker screen shots
+![picture](https://github.com/Bremah-mvp/Fitness-Tracker/blob/main/assets/Screenshot%202020-10-18%20081307.png)
+
+![picture](https://github.com/Bremah-mvp/Fitness-Tracker/blob/main/assets/2.png)
 
                         Technologies
 
