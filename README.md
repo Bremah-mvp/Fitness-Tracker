@@ -1,57 +1,62 @@
-# Unit 17 Nosql Homework: Workout Tracker
+                        Table of Contents
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+-Description
 
-## User Story
+-How it works
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+-Deployed Link
 
-## Business Context
+-Screenshots
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+-Technologies
 
-## Acceptance Criteria
+-Installation
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+-Usage
 
-The user should be able to:
+-License
 
-  * Add exercises to a previous workout plan.
+-Questions
 
-  * Add new exercises to a new workout plan.
+                         Description
 
-  * View the combined weight of multiple exercises on the `stats` page.
+Keep your body in shape with the best workout's tracking that lets u get all the work in and maximise your entire body strength with a workout tracking app using Node.js, Express, MongoDB, and Mongoose. This application lets a user create any desired or favourable workouts and be able to pick up from where they left off with the last workout. They can then add cardio or resistance sessions to each workout. The dashboard displays statistics about the various exercises and workouts.
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+                        How it works
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+A user simply just has to log the app or get it running, add or continue with previous workouts by clicking the add or complete buttons and also click on the dashboard link at the navigation bar to view the stats of their workouts
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+                        Deployed Link
+Fitness Tracker
 
-## Commit Early and Often
+                        Screenshots
+fitness tracker screen shots
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+                        Technologies
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+Node.js
+Express
+MongoDB
+Mongoose
+Heroku
+Installation
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+                     To install dependencies, run the following:
 
-Follow these guidelines for committing:
+npm install
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+To run it locally, make sure that the MongoDB server is running on your machine.
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+                      Usage
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+After downloading the files and installing dependencies, run
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+npm start
 
-We want you to have well over 200 commits by graduation, so commit early and often!
+                      License
 
-## Submission on BCS
+This repository is licensed under the MIT license.
 
-You are required to submit the following:
+Questions
 
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+Questions about this repository? Please contact me at mvpbremah@gmail.com. View more of my work in GitHub at Bremah-mvp
