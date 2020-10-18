@@ -1,6 +1,8 @@
 const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const routes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 
 require('dotenv').config()
@@ -19,8 +21,7 @@ app.use(express.static('public'));
 
 
 
-const routes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
+
 
 
 app.use('/api', routes);
