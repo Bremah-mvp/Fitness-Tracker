@@ -17,6 +17,15 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
+
+
+const routes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
+
+app.use('/api', routes);
+app.use('/', htmlRoutes);
+
 mongoose.connect(
 	process.env.MONGODB_URI || 'mongodb://localhost/workout',
 	{
@@ -26,13 +35,6 @@ mongoose.connect(
 		useFindAndModify: false
 	}
 );
-
-const routes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
-
-
-app.use('/api', routes);
-app.use('/', htmlRoutes);
 
 
 app.listen(PORT, () => {
