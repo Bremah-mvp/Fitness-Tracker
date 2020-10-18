@@ -27,7 +27,7 @@ mongoose.connect(
 	}
 );
 
-const routes = require('./routes/index');
+const routes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
 
