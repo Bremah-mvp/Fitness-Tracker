@@ -33,9 +33,9 @@ Fitness Tracker: https://fitness-tracker256.herokuapp.com/?id=5f8cea3bd484950017
 
                         Screenshots
 fitness tracker screen shots
-![picture](https://github.com/Bremah-mvp/Fitness-Tracker/blob/main/assets/Screenshot%202020-10-18%20081307.png)
+![picture](https://github.com/Bremah-mvp/Fitness-Tracker/blob/main/public/assets/Screenshot%202020-10-18%20081307.png)
 
-![picture](https://github.com/Bremah-mvp/Fitness-Tracker/blob/main/assets/2.png)
+![picture](https://github.com/Bremah-mvp/Fitness-Tracker/blob/main/public/assets/2.png)
 
                         Technologies
 
