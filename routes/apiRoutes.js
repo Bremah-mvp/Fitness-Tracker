@@ -1,58 +1,53 @@
-var express = require("express");
-var router = express.Router();
-const Workout = require("../models/Workout.js");
+const db = require("../models/Workout");
 
+const router = require("express").Router();
 
-module.exports = function(app) {
-  // middleware that is specific to this router
-  router.use(function timeLog(req, res, next) {
-    console.log("Time: ", Date.now());
-    next();
-  });
-  
-  router.get("/api/workouts", (req, res) => {
-    Workout.find()
-      .then(dbWorkout => {
-        res.json(dbWorkout);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-  });
-  
-  router.post("/api/workouts", (req, res) => {
-  Workout.create({})
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+router.get("/workouts", (req, res) => {
+  db.find({}).sort({ day: -1 }).limit(1)
+    .then(workouts => {
+      res.json(workouts);
     })
     .catch(err => {
-      res.json(err);
+      res.status(400).json(err);
+      console.log(err);
     });
 });
 
-router.put("/api/workouts/:id", ({ body, params }, res) => {
-  Workout.findByIdAndUpdate(
-    params.id,
-    { $push: { exercises: body } },
+router.get("/workouts/range", (req, res) => {
+  db.find({})
+    .then(workouts => {
+      res.json(workouts);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+      console.log(err);
+    });
+});
 
-    { new: true, runValidators: true }
+router.post("/workouts", ({ body }, res) => {
+  db.create(body)
+    .then(workout => {
+      res.json(workout);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+      console.log(err);
+    });
+});
+
+router.put('/workouts/:id', (req, res) => {
+  db.findByIdAndUpdate(
+    req.params.id,
+    { $push: { exercises: req.body } },
+    { new: true }
   )
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+    .then(workout => {
+      res.json(workout);
     })
     .catch(err => {
-      res.json(err);
+      res.status(400).json(err);
+      console.log(err);
     });
 });
 
-router.get("/api/workouts/range", (req, res) => {
-  Workout.find({})
-    .then(dbWorkout => {
-      // console.log(dbWorkout)
-      res.json(dbWorkout);
-    })
-    .catch(err => {
-      res.json(err);
-    });
-});
-};
+module.exports = router;
