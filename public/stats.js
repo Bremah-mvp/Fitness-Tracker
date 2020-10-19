@@ -1,5 +1,3 @@
-
-
 fetch("/api/workouts/range")
   .then(response => {
     return response.json();
