@@ -29,7 +29,7 @@ Keep your body in shape with the best workout's tracking that lets u get all the
 A user simply just has to log the app or get it running, add or continue with previous workouts by clicking the add or complete buttons and also click on the dashboard link at the navigation bar to view the stats of their workouts
 
                         Deployed Link
-Fitness Tracker
+Fitness Tracker: https://fitness-tracker256.herokuapp.com/?id=5f8cea3bd484950017dc1cbd
 
                         Screenshots
 fitness tracker screen shots
